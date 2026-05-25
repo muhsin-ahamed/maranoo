@@ -1,6 +1,6 @@
 # Maranoo? 🛒 
 
-[![Flutter Web Deployment](https://img.shields.io/badge/Live-Web%20Demo-vibrantgreen)](https://YOUR_GITHUB_USERNAME.github.io/maranoo/)
+[![Flutter Web Deployment]([https://img.shields.io/badge/Live-Web%20Demo-vibrantgreen](https://maranoo.vercel.app/))](https://YOUR_GITHUB_USERNAME.github.io/maranoo/)
 [![Platform](https://img.shields.io/badge/platform-Android%20|%20iOS%20|%20Web-blue.svg)](https://flutter.dev)
 [![Database](https://img.shields.io/badge/Storage-Hive%20CE-orange)](https://pub.dev/packages/hive_ce)
 
