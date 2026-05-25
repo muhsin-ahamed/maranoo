@@ -39,8 +39,39 @@ maranoo/
 └── ios/
     └── Runner/
         └── Info.plist        <── Native iOS Permissions Configuration
-
-
         
                                               └──> iOS (File Sandbox)
                                               └──> Android (Secure App Storage)
+```
+## 🏗️ Core Architecture Diagram
+    ┌─────────────────────────────────────────────────────────┐
+       │             User Interface Layer (Material 3)           │
+       │  [AppBar Branded Text] [List Cards] [Checkboxes] [FAB]  │
+       └────────────────────────────┬────────────────────────────┘
+                                    │
+                       (User Input / Gesture Intercept)
+                                    │
+                                    ▼
+       ┌─────────────────────────────────────────────────────────┐
+       │             State & Business Logic Layer                │
+       │      [ChangeNotifier / ValueNotifier Listeners]         │
+       └───────────────┬─────────────────────────┬───────────────┘
+                       │                         │
+            (Pick Receipt Attachment)     (Trigger Data Sync)
+                       │                         │
+                       ▼                         ▼
+       ┌────────────────────────┐       ┌────────────────────────┐
+       │     Image Picker API   │       │   Hive Box Controller  │
+       │    (Camera / Gallery)  │       │  (Nested CRUD Engine)  │
+       └───────────────┬────────┘       └────────────┬───────────┘
+                       │                             │
+              (Saves File Path)               (Persists Data)
+                       │                             │
+                       ▼                             ▼
+       ┌─────────────────────────────────────────────────────────┐
+       │           Device Sandbox / Persistent Storage           │
+       └──────┬──────────────────────┬──────────────────────┬────┘
+              │                      │                      │
+              ▼                      ▼                      ▼
+         [Android]                 [iOS]                  [Web]
+   (SQLite / App Folder)     (NSDocumentDirectory)    (IndexedDB)
