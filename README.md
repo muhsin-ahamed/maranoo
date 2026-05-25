@@ -2,9 +2,7 @@
 
 # Maranoo? 🛒 
 
-[![Flutter Web Deployment](https://img.shields.io/badge/Live-Web%20Demo-vibrantgreen)](https://YOUR_GITHUB_USERNAME.github.io/maranoo/)
-[![Platform](https://img.shields.io/badge/platform-Android%20|%20iOS%20|%20Web-blue.svg)](https://flutter.dev)
-[![Database](https://img.shields.io/badge/Storage-Hive%20CE-orange)](https://pub.dev/packages/hive_ce)
+
 
 **Maranoo** (from the Malayalam word *"മറന്നോ?"* meaning *"Did you forget?"*) is a premium, lightweight, privacy-first shopping and task list application designed for modern mobile and desktop web browsers. 
 
